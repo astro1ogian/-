@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>变量</title>
+<script>
+    var arr = [];
+    var arr1 = [1,2,'pink',true];//数组初始化
+    console.log(arr1[3]);
+    var week = ['周一','周二','周三','周四','周五','周六','周天','憨批'];
+    for (var i = 0;i < 7;i++){
+        console.log(week[i]);
+    }
+    console.log(week.length);
+    for (var i = 0;i < week.length;i++){
+        console.log(week[i]);
+        
+    }
+    var arr = [2,6,1,7,4];
+    var sum = 0;
+    var avg = 0;
+    for (var i = 0;i < arr.length;i++){
+        sum = sum + arr[i];
+        avg = sum/arr.length;
+    }
+    console.log(sum);
+    console.log(avg);
+    var arr = [2,6,1,77,52,25,7];
+    var max = arr[0];
+    for( var i = 1;i<arr.length;i++){
+        if (arr[i]>max){
+            max = arr[i];
+            
+            
+        }
+    }
+    console.log('该数组里的最大值是'+ max);
+
+
+    var char = ['red','green','blue','pink'];
+    var str = '';
+    var sep ='!';
+    for(var i=0;i<char.length;i++){
+        str +=char[i]+sep;
+    }
+
+    console.log(str);
+
+    var jc = ['red','green','blue'];
+    jc.length = 5;
+    jc[3] = 'pink';
+    console.log(jc);//不要直接给数组名赋值，否则一个都没了
+
+    var sz = [];
+    for (var i = 0;i<10;i++){
+        sz[i]= i+ 1;
+    }
+    console.log(sz);
+    
+    
+
+
+    
+
+
+
+    
+    
+    
+
+    
+
+
+
+    
+
+</script>
+</head>
+<body>
+  <p id="p1">我是第一段文字</p>
+  <p id="p2">我是第二段文字</p>
+
+ 
+</body>
+</html>

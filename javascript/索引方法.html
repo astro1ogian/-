@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>索引方法</title>
+</head>
+<body>
+  
+  
+ <script>
+var arr = ['red','blue','pink','black','blue'];
+console.log(arr.indexOf('blue'));//仅返回第一个相同元素索引号，找不到元素，返回-1
+
+console.log(arr.lastIndexOf('pink'));//从后面开始查找
+
+
+
+//数组去重（重点案例）
+//1.把源数组进行遍历，用源数组的元素去检查目标数组，有则删除，没有则添加
+//2.如何知道元素是否存在，用  新数组.indexOF（）  检查，如果返回是-1就说明没有，则可以添加
+
+//封装一个去重的函数
+
+function unique(arr){
+    var newArr = [];
+    for ( var i = 0 ; i < arr.length ; i++ ){
+      if(   newArr.indexOf(arr[i]) ===-1){
+          newArr.push(arr[i]);
+
+      }
+  }
+return newArr;
+}
+var xin = unique(['c','b','q','z','b','z'])
+console.log(xin);
+
+//
+
+
+ </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>案例3</title>
+    <script>
+        var str = 'hauidhhakjwhduiaoaidwdkhdjikjdowi';
+        var o = {};
+
+        for (var i = 0; i < str.length; i++) {
+            var chars = str.charAt(i);
+            if (o[chars]) {
+                o[chars]++;
+
+            } else {
+                o[chars] = 1;
+            }
+        }
+        console.log(o);
+
+        var max = 0;
+        var ch = '';
+        for (var k in o) {
+            //k得到的是属性名
+            //o[k]
+
+            if (o[k] > max) {
+                max = o[k];
+                ch = k;
+            }
+        }
+        console.log('最多的字符是：' + ch + '  他的值是：' + max);
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

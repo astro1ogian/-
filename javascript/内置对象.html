@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>内置对象</title>
+</head>
+<body>
+  
+  
+ <script>
+   //查阅内置对象文档 
+
+   //Math.max([value1[,value2,...]])     中括号表示可以有也可以没有
+
+   console.log(Math.PI);
+
+
+   console.log(Math.max(1,99,3));
+
+   console.log(Math.max(-1,-9));
+
+   console.log(Math.max(1,99,'pink'));
+
+   var myMath = {
+       PI: 3.141592653,
+       max : function(){
+        var max = arguments[0];
+        for (var i = 1; i< arguments.lenght;i++){
+            if (arguments[i] > max){
+                max = arguments[i];
+            }
+        }
+           return max;
+       },
+       min : function(){
+           var min = arguments[0];
+           for (var i = 1;i<arguments.length;i++){
+           if (arguments[i]<min){
+               min = arguments[i];
+           }
+           }
+      return min;
+       }
+      
+
+   
+   }
+   
+   
+   console.log(myMath.PI);
+   console.log(myMath.max(-1,1,5,9,45));
+   console.log(myMath.min(-1,1,5,9,45));
+  
+   
+   
+   console.log(Math.random());
+    
+
+
+    function getRandom(min,max){
+        return Math.floor(Math.random()*(max - min+1)) +min;
+
+    }
+    console.log(getRandom(15,55));
+    
+    var arr = ['pink','biue','yellow','rad','black'];
+    console.log(arr[getRandom(0,arr.length - 1)]);
+    
+
+/* var random = getRandom (1,10);
+while(true){
+    var num = prompt('你来猜，输入1~10之间的数')
+    if(num > random){
+        alert('你猜大了');
+    }
+        else if(num < random){
+            alert('你猜小了');
+
+       
+    }else {
+        alert('你猜对了');
+        break;
+    }
+}
+     */
+   //用户猜
+/* var random = getRandom (1,50);
+for(var i = 1 ;i<=5 ;i++){
+    var num = prompt('你来猜，输入1~50之间的数')
+    if(num > random){
+        alert('你猜大了');
+    }
+        else if(num < random){
+            alert('你猜小了');
+
+       
+    }else {
+        alert('你猜对了');
+   
+    }
+
+}
+alert('你好笨啊'); */
+
+
+
+//日期对象  Date()是一个构造函数，必须使用new 来调用创建日期对象
+
+var arr = new Array();
+var obj = new Object();
+var date = new Date();
+console.log(date);//如果没有参数，则输出当前时间
+
+var date1 = new Date(2019,5,6);
+console.log(date1);
+
+var date2 = new Date();
+console.log(date.getFullYear());
+console.log(date.getMonth()+1);//返回的月份会小一个月
+console.log(date.getDate());
+console.log(date.getDay());//周日返回0
+//2020年5月6日星期三
+var year = date.getFullYear();
+var month = date.getMonth()+1;
+var dates = date.getDate();
+var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六','']
+var day = date.getDay();
+console.log('今天是：'+year+'年'+month+'月'+dates+'日 '+ arr[day]);
+
+
+function getTimer(){
+    var time = new Date();
+    var h = time.getHours();
+    h = h < 10 ? '0' + h:h;
+    var m = time.getMinutes();
+    m = m < 10 ? '0' + m : m;
+    var s = time.getSeconds();
+    s = s < 10 ? '0' + s : s ;
+    return h +':'+m+':'+s;
+}
+console.log(getTimer());
+
+//时间戳
+var date3 = new Date();
+console.log(date3.getTime());
+
+var date4 = +new Date();
+console.log(date4);
+
+console.log(Date.now());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+ </script>
+</body>
+</html>

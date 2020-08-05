@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>变量</title>
+<script>
+   //利用字面量创建对象{}
+   var obj = {};//创建了一个空的对象
+   var obj = {
+       uname: '张三丰',
+       age: 18,
+       sex:'男',
+       sayhi:function(){
+           console.log('hi');
+           
+       }
+   }
+   //(1)里面的属性或者方法我们采取键值对的形式 键 属性名：值 属性值
+   //(2)多个属性或者方法中间用逗号隔开
+   //(3)放法冒号后面跟的是一个匿名函数
+   //2.使用对象
+   //(1)调用对象的属性 我们采取 对象名.属性名
+   console.log(obj.uname);
+   //(2)调用属性还有一种方法 对象名['属性名']
+   console.log(obj['age']);
+   //(3)调用对象的方法 sayhi  对象名.方法名
+   obj.sayhi()
+
+
+   //课堂实例
+   var dog = {
+       dogname:'可可',
+       dogtype:'阿拉斯加犬',
+       dogage:'5',
+       dogcolor:'棕红色',
+       skills:function (){
+             console.log('bark'+' '+'showfilm');
+             
+       }
+           
+       
+   }
+   console.log(dog.dogage);
+   console.log(dog.dogname);
+   dog.skills()
+   
+   
+    var shuai = new shuaige();
+    shuai.uname = 'jc';
+    shuai.age = 18;
+    shuai.sex = '男';
+    shuai.sayhi = function(){
+        console.log('hi~');
+        
+    }
+
+    
+
+</script>
+</head>
+<body>
+
+ 
+</body>
+</html>

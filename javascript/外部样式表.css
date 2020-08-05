@@ -1,0 +1,11 @@
+div {
+    font: italic 700 16px 'Microsoft yahei'
+    /* 后面两个必须有 */
+}
+
+#pink {
+    color: pink;
+}
+
+
+/* id选择器的口诀：样式#定义，结构id调用，只能调用一次，别人请勿调用 */

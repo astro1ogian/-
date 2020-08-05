@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>变量</title>
+<script>
+var ldh = {
+    uname:'刘德华',
+    age:55,
+    sing:function(){
+        console.log('冰雨');
+
+        
+    }
+}
+    
+
+var zxy = new Object();
+zxy.uname = '张学友';
+zxy.age = 57;
+zxy.sex = '男';
+zxy.sing = function(){
+    console.log('李香兰');
+
+    
+}
+
+//一次创建一个对象，属性很多都相同，利用函数方法重复这些相同代码
+//构造函数里面封装的是对象，所以起个单独名字叫构造函数
+
+//构造函数语法格式
+/* function 构造函数名 (){
+    this.属性 = 值;
+    this.方法 = function(){
+
+    }
+} */
+function Start(uname,age,sex){
+    this.name = uname;
+
+    this.age = age;
+
+    this.sex = sex;
+
+    this.song = function (sing) {
+        console.log(sing);
+        
+      }
+
+}
+//构造函数首字母必须大写
+var lzx = new Start('林志炫',18,'男');
+//构造函数不需要return就能返回结果
+console.log(typeof lzx);
+console.log(lzx.name);
+console.log(lzx['sex']);
+
+
+lzx.song('单身情歌');
+
+
+
+
+function wzry (name,type,blood){
+    this.name = name;
+    this.type = type;
+    this.blood = blood;
+    this.attack = function(X){
+        console.log(X);
+        
+    }
+    
+}
+var lianpo = new wzry('廉颇','力量型',500);
+lianpo.attack('近战');
+console.log(lianpo.name);
+console.log(lianpo.type);
+console.log(lianpo.blood);
+
+var houyi = new wzry('后羿','射手型',100)
+console.log(houyi.name);
+console.log(houyi.type);
+console.log(houyi.blood);
+houyi.attack('远程');
+
+
+
+//遍历对象
+
+for(var k in lianpo){
+    console.log(k);
+    console.log(lianpo[k]);
+    
+    
+}
+
+
+//我们使用 for in 里面的变量，我们喜欢写k 或者key
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+
+ 
+</body>
+</html>

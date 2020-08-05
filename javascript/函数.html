@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>变量</title>
+<script>
+//函数就是封装好的程序运行代码
+function getsum(num1,num2){
+    var sum = 0;
+    for (var i = num1; i <= num2; i++){
+        sum +=i;
+    }
+    console.log(sum);
+    
+}
+    
+
+    getsum(1 , 77);
+
+
+
+    function getResult(){
+        return 666;
+    }
+    getResult();
+    console.log(getResult());
+
+
+    //求任意两个数之和
+
+    function gethe(num3,num4){
+        return num3 + num4 ;
+
+    }
+    console.log(gethe(5,7));
+
+    function getMax (num5,num6){
+   /*      if (num5>num6){
+            return num5;
+        }else  {
+            return num6;
+        } */
+        return num5 > num6? num5 :num6;
+    }
+    console.log(getMax(21,33));
+
+
+    //函数字面量创建对象
+    
+    
+    
+    
+
+</script>
+</head>
+<body>
+  <p id="p1">我是第一段文字</p>
+  <p id="p2">我是第二段文字</p>
+
+ 
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>变量</title>
+<script>
+var obj = new Object();
+obj.uname = '张三份';
+obj.age = 18;
+obj.sex = '男';
+obj.sayhi = function(){
+    console.log('hi~');
+    
+}
+//(1)利用  等号 = 赋值 的方法 添加对象的属性和方法
+//(2)每个属性和方法之间用分号结束
+console.log(obj.uname);
+console.log(obj['sex']);
+
+
+var nijia = new Object();
+nijia.uname = '漩涡鸣人';
+nijia.sex = '男';
+nijia.age = 19;
+nijia.skill = function(){
+    console.log('影分身术');
+
+
+    
+}
+console.log(nijia.uname);
+console.log(nijia.sex);
+console.log(nijia.age);
+nijia.skill()
+console.log(nijia['uname']);
+console.log(nijia['sex']);
+console.log(nijia['age']);
+
+
+
+
+
+
+
+
+    
+
+</script>
+</head>
+<body>
+
+ 
+</body>
+</html>
